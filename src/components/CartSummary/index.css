@@ -1,0 +1,32 @@
+/* Write your CSS here */
+.cart-summary-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 400px;
+}
+.total-heading {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: #616e7c;
+}
+.amount {
+  color: #171f46;
+  font-size: 19px;
+  font-weight: bold;
+}
+.total-products-count {
+  font-size: 12px;
+  font-family: 'Roboto';
+  color: #616e7c;
+}
+.shop-now-btn {
+  background-color: #0b69ff;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 10px;
+  text-align: center;
+  padding: 5px;
+  border-style: none;
+}
