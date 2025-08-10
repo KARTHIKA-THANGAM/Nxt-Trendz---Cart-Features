@@ -22,6 +22,13 @@ class App extends Component {
     this.setState({cartList: []})
   }
 
+  removeCartItem = id => {
+    const {cartList} = this.state
+    const updatedCartList = cartList.filter(each => each.id !== id)
+    console.log(updatedCartList)
+    this.setState({cartList: updatedCartList})
+  }
+
   incrementCartItemQuantity = id => {
     this.setState(prevState => ({
       cartList: prevState.cartList.map(eachCartItem => {
@@ -52,15 +59,6 @@ class App extends Component {
     }
   }
 
-  removeCartItem = id => {
-    const {cartList} = this.state
-    const updatedCartList = cartList.filter(
-      eachCartItem => eachCartItem.id !== id,
-    )
-
-    this.setState({cartList: updatedCartList})
-  }
-
   addCartItem = product => {
     const {cartList} = this.state
     const productObject = cartList.find(
@@ -84,13 +82,6 @@ class App extends Component {
 
       this.setState({cartList: updatedCartList})
     }
-  }
-
-  removeCartItem = id => {
-    const {cartList} = this.state
-    const updatedCartList = cartList.filter(each => each.id !== id)
-    console.log(updatedCartList)
-    this.setState({cartList: updatedCartList})
   }
 
   render() {
